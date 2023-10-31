@@ -1,0 +1,118 @@
+:root {
+    --branco: #FFFFFF;
+    --cor-de-fundo: #FFEAD4;
+    --cor-lett: #BE253F;
+    --fonte-titulos: 'Pacifico', cursive;
+    --fonte-textos: 'Lato', sans-serif
+}
+
+* {
+    background-color: var(--cor-de-fundo);
+    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+}
+
+h1, h2 {
+    background: none;
+    color: var(--cor-lett);
+    font-family: var(--fonte-titulos);
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+p {
+    background: none;
+    font-family: var(--fonte-textos);
+    font-size: 1rem;
+}
+
+svg {
+    background-color: transparent;
+}
+
+.praia {
+    animation: inicia-pagina 1.5s ease-in-out forwards;
+}
+
+@keyframes inicia-pagina {
+    from {
+        transform: translateY(-2000px);
+    }
+}
+
+.container-header {
+    width: 100vw;
+}
+
+.lett-header {
+    left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+    margin-top: 10%;
+    background: transparent;
+    position: absolute;
+    fill: transparent;
+    animation: lett-preenchimento 1s ease-in-out forwards 2.5s;
+}
+
+.lett-header path {
+    stroke-width: 2px;
+    stroke: var(--cor-lett);
+    stroke-dasharray: 3000;
+    stroke-dashoffset: 3000;
+    animation: lett-tracado 1.5s ease-in-out forwards 1.5s;
+}
+
+@keyframes lett-preenchimento {
+    to {
+        fill: var(--cor-lett);
+    }
+}
+
+@keyframes lett-tracado {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.container-cards {
+    display: flex;
+    justify-content: space-between;
+    margin: 8rem;
+    width: 80%;
+}
+
+.card {
+    background-color: var(--branco);
+    border-radius: 0.75rem;
+    margin: 2.5rem;
+    padding: 1.25rem;
+    width: 50%;
+}
+
+.container-footer {
+    position: relative;
+}
+
+.lett-footer {
+    fill: var(--branco);
+    left: 20%;
+    margin-top: 20%;
+    opacity: 0.5;
+    position: absolute;
+    width: 60%;
+}
+
+.info {
+    margin: 1rem;
+    text-align: center;
+}
